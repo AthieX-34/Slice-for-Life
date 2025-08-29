@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Customer - JILAZ Motors</title>
+    <meta name="description" content="Add a new customer to JILAZ Motors management system">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Add Customer",
+      "description": "Add a new customer to JILAZ Motors management system"
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="brand"><span class="logo" aria-hidden="true"></span> JILAZ Motors</div>
+      <nav aria-label="Primary">
+        <a href="./index.html">Home</a>
+        <a href="./vehicles.html">Vehicles</a>
+        <a href="./customers.html">Customers</a>
+        <a href="./appointment.html">Appointments</a>
+        <a href="./invoices.html" class="active">Invoices</a>
+      </nav>
+    </div>
+  </header>
+
+    <main class="container">
+        <div class="page-header">
+            <div class="flex items-center gap-4 mb-4">
+                <a href="customers.html" class="btn btn-secondary">← Back</a>
+                <h2>Add New Customer</h2>
+            </div>
+            <p>Enter the customer details below.</p>
+        </div>
+
+        <div class="card">
+            <h3>Customer Information</h3>
+            <form class="form-grid">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="customer@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Enter full address">
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+
+                <div class="form-group">
+                    <label for="customerType">Customer Type</label>
+                    <select id="customerType" name="customerType" required>
+                        <option value="">Select type</option>
+                        <option value="individual">Individual</option>
+                        <option value="business">Business</option>
+                        <option value="fleet">Fleet</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="preferredContact">Preferred Contact Method</label>
+                    <select id="preferredContact" name="preferredContact">
+                        <option value="">Select method</option>
+                        <option value="email">Email</option>
+                        <option value="phone">Phone</option>
+                        <option value="text">Text Message</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" name="notes" rows="3" placeholder="Additional notes about the customer..."></textarea>
+                </div>
+
+                <div class="form-actions full-width">
+                    <a href="customers.html" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary">Add Customer</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> JILAZ Motors. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Customer added successfully!');
+            window.location.href = 'customers.html';
+        });
+    </script>
+</body>
+</html>

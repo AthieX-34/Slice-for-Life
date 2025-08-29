@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Appointment - JILAZ Motors</title>
+    <meta name="description" content="Schedule a new Appointment appointment at JILAZ Motors">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Add Appointment",
+      "description": "Schedule a new Appointment appointment at JILAZ Motors"
+    }
+    </script>
+</head>
+<body>
+   <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="brand"><span class="logo" aria-hidden="true"></span> JILAZ Motors</div>
+      <nav aria-label="Primary">
+        <a href="./index.html">Home</a>
+        <a href="./vehicles.html">Vehicles</a>
+        <a href="./customers.html">Customers</a>
+        <a href="./appointment.html">Appointment</a>
+        <a href="./invoices.html" class="active">Invoices</a>
+      </nav>
+    </div>
+  </header>
+
+    <main class="container">
+        <div class="page-header">
+            <div class="flex items-center gap-4 mb-4">
+                <a href="appointment.html" class="btn btn-secondary">← Back</a>
+                <h2>Schedule New Appointment</h2>
+            </div>
+            <p>Enter the appointment details below.</p>
+        </div>
+
+        <div class="card">
+            <h3>Appointment Information</h3>
+            <form class="form-grid">
+                <div class="form-group">
+                    <label for="AppointmentType">Appointment Type</label>
+                    <select id="AppointmentType" name="AppointmentType" required>
+                        <option value="">Select appointment type</option>
+                        <option value="oil-change">Oil Change</option>
+                        <option value="brake-Appointment">Brake Appointment</option>
+                        <option value="tire-rotation">Tire Rotation</option>
+                        <option value="engine-diagnostic">Engine Diagnostic</option>
+                        <option value="transmission-Appointment">Transmission Appointment</option>
+                        <option value="annual-inspection">Annual Inspection</option>
+                        <option value="custom">Custom Appointment</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="customer">Customer</label>
+                    <select id="customer" name="customer" required>
+                        <option value="">Select customer</option>
+                        <option value="john-doe">John Doe</option>
+                        <option value="jane-smith">Jane Smith</option>
+                        <option value="bob-johnson">Bob Johnson</option>
+                        <option value="alice-williams">Alice Williams</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="vehicle">Vehicle</label>
+                    <select id="vehicle" name="vehicle" required>
+                        <option value="">Select vehicle</option>
+                        <option value="toyota-camry-abc123">2020 Toyota Camry (ABC-123)</option>
+                        <option value="honda-civic-xyz789">2019 Honda Civic (XYZ-789)</option>
+                        <option value="ford-f150-def456">2021 Ford F-150 (DEF-456)</option>
+                        <option value="bmw-x3-ghi789">2018 BMW X3 (GHI-789)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="AppointmentDate">Appointment Date</label>
+                    <input type="date" id="AppointmentDate" name="AppointmentDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="AppointmentTime">Appointment Time</label>
+                    <input type="time" id="AppointmentTime" name="AppointmentTime" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="duration">Estimated Duration (hours)</label>
+                    <input type="number" id="duration" name="duration" min="0.5" step="0.5" placeholder="e.g., 2.5">
+                </div>
+
+                <div class="form-group">
+                    <label for="priority">Priority</label>
+                    <select id="priority" name="priority">
+                        <option value="normal">Normal</option>
+                        <option value="high">High</option>
+                        <option value="urgent">Urgent</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="technician">Assigned Technician</label>
+                    <select id="technician" name="technician">
+                        <option value="">Select technician</option>
+                        <option value="mike-wilson">Mike Wilson</option>
+                        <option value="sarah-davis">Sarah Davis</option>
+                        <option value="tom-brown">Tom Brown</option>
+                        <option value="lisa-garcia">Lisa Garcia</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="estimatedCost">Estimated Cost ($)</label>
+                    <input type="number" id="estimatedCost" name="estimatedCost" min="0" step="0.01" placeholder="0.00">
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="customerRequests">Customer Requests</label>
+                    <textarea id="customerRequests" name="customerRequests" rows="3" placeholder="Specific requests from the customer..."></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="internalNotes">Internal Notes</label>
+                    <textarea id="internalNotes" name="internalNotes" rows="3" placeholder="Internal notes for technicians..."></textarea>
+                </div>
+
+                <div class="form-actions full-width">
+                    <a href="Appointment.html" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary">Schedule Appointment</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> JILAZ Motors. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Set minimum date to today
+        document.getElementById('AppointmentDate').min = new Date().toISOString().split('T')[0];
+        
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Appointment scheduled successfully!');
+            window.location.href = 'Appointment.html';
+        });
+    </script>
+</body>
+</html>

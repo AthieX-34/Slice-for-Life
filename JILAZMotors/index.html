@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JILAZ Motors Dashboard | Home</title>
+  <meta name="description" content="JILAZ Motors management dashboard: quick links to Vehicles, Customers, appointment, and Invoices." />
+  <link rel="stylesheet" href="./styles.css" />
+  <meta name="robots" content="index,follow" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "JILAZ Motors Dashboard",
+    "url": "https://isaacsmotors.local/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://isaacsmotors.local/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="brand"><span class="logo" aria-hidden="true"></span> JILAZ Motors</div>
+      <nav aria-label="Primary">
+        <a href="./index.html" class="active">Home</a>
+        <a href="./vehicles.html">Vehicles</a>
+        <a href="./customers.html">Customers</a>
+        <a href="./appointment.html">Appointments</a>
+        <a href="./invoices.html">Invoices</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <section class="page-header">
+      <div>
+        <h1>JILAZ Motors Dashboard</h1>
+        <p class="page-subtitle">Manage vehicles, customers, appointment, and invoices in one place.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="quicklinks">
+      <h2 id="quicklinks" class="m-0 small" style="color:hsl(var(--muted-foreground))">Quick Links</h2>
+      <div class="grid mt-2">
+        <article class="card" aria-labelledby="vehicles-title">
+          <div class="card-header">
+            <h3 id="vehicles-title" class="card-title">Vehicles</h3>
+          </div>
+          <p class="card-subtle">View and manage vehicle records.</p>
+          <div class="mt-3">
+            <a class="btn primary" href="./vehicles.html" aria-label="Go to Vehicles">Open Vehicles</a>
+          </div>
+        </article>
+        <article class="card" aria-labelledby="customers-title">
+          <div class="card-header">
+            <h3 id="customers-title" class="card-title">Customers</h3>
+          </div>
+          <p class="card-subtle">Manage customer profiles and history.</p>
+          <div class="mt-3">
+            <a class="btn primary" href="./customers.html" aria-label="Go to Customers">Open Customers</a>
+          </div>
+        </article>
+        <article class="card" aria-labelledby="appointment-title">
+          <div class="card-header">
+            <h3 id="appointment-title" class="card-title">Appointment</h3>
+          </div>
+          <p class="card-subtle">Schedule and track service jobs.</p>
+          <div class="mt-3">
+            <a class="btn primary" href="./appointment.html" aria-label="Go to appointment">Open appointment</a>
+          </div>
+        </article>
+        <article class="card" aria-labelledby="invoices-title">
+          <div class="card-header">
+            <h3 id="invoices-title" class="card-title">Invoices</h3>
+          </div>
+          <p class="card-subtle">Review and manage invoices.</p>
+          <div class="mt-3">
+            <a class="btn primary" href="./invoices.html" aria-label="Go to Invoices">Open Invoices</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <p class="site-footer">© <span id="year"></span> JILAZ Motors. All rights reserved.</p>
+  </main>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

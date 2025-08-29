@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Customers | JILAZ Motors</title>
+  <meta name="description" content="Manage customers at JILAZ Motors: contact info, reliability status, vehicles, and last service." />
+  <link rel="stylesheet" href="./styles.css" />
+  <meta name="robots" content="index,follow" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Customers",
+    "description": "Manage customer profiles at JILAZ Motors"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="brand"><span class="logo" aria-hidden="true"></span> JILAZ Motors</div>
+      <nav aria-label="Primary">
+        <a href="./index.html">Home</a>
+        <a href="./vehicles.html">Vehicles</a>
+        <a href="./customers.html" class="active">Customers</a>
+        <a href="./appointment.html">Appointments</a>
+        <a href="./invoices.html">Invoices</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <section class="page-header">
+      <div>
+        <h1>Customers</h1>
+        <p class="page-subtitle">Manage your customer database</p>
+      </div>
+      <a class="btn primary" href="./add-customer.html" aria-label="Add customer">+ Add Customer</a>
+    </section>
+
+    <div class="controls">
+      <span class="input-icon" aria-hidden="true">🔎</span>
+      <input class="input" placeholder="Search customers..." aria-label="Search customers" />
+    </div>
+
+    <section aria-labelledby="customers-list">
+      <h2 id="customers-list" class="hidden">Customers List</h2>
+      <div class="grid">
+        <!-- John Smith -->
+        <article class="card" aria-labelledby="cust-1">
+          <div class="card-header">
+            <div>
+              <h3 id="cust-1" class="card-title">John Smith</h3>
+              <div class="card-subtle">john.smith@example.com</div>
+              <div class="card-subtle">(555) 123-4567</div>
+            </div>
+            <div>
+              <span class="badge ok">★ Reliable</span>
+              <button class="btn" aria-label="More actions" title="More">⋯</button>
+            </div>
+          </div>
+          <div class="grid" style="grid-template-columns:repeat(2,1fr); gap:12px;">
+            <div>
+              <div class="card-subtle">Vehicles</div>
+              <div><strong>2</strong></div>
+            </div>
+            <div>
+              <div class="card-subtle">Last Service</div>
+              <div><strong>2 weeks ago</strong></div>
+            </div>
+          </div>
+        </article>
+        <!-- Sarah Johnson -->
+        <article class="card" aria-labelledby="cust-2">
+          <div class="card-header">
+            <div>
+              <h3 id="cust-2" class="card-title">Sarah Johnson</h3>
+              <div class="card-subtle">sarah.j@example.com</div>
+              <div class="card-subtle">(555) 987-6543</div>
+            </div>
+            <div>
+              <span class="badge ok">★ Reliable</span>
+              <button class="btn" aria-label="More actions" title="More">⋯</button>
+            </div>
+          </div>
+          <div class="grid" style="grid-template-columns:repeat(2,1fr); gap:12px;">
+            <div>
+              <div class="card-subtle">Vehicles</div>
+              <div><strong>1</strong></div>
+            </div>
+            <div>
+              <div class="card-subtle">Last Service</div>
+              <div><strong>1 month ago</strong></div>
+            </div>
+          </div>
+        </article>
+        <!-- Michael Brown -->
+        <article class="card" aria-labelledby="cust-3">
+          <div class="card-header">
+            <div>
+              <h3 id="cust-3" class="card-title">Michael Brown</h3>
+              <div class="card-subtle">michael.b@example.com</div>
+              <div class="card-subtle">(555) 456-7890</div>
+            </div>
+            <div>
+              <span class="badge info">New Customer</span>
+              <button class="btn" aria-label="More actions" title="More">⋯</button>
+            </div>
+          </div>
+          <div class="grid" style="grid-template-columns:repeat(2,1fr); gap:12px;">
+            <div>
+              <div class="card-subtle">Vehicles</div>
+              <div><strong>1</strong></div>
+            </div>
+            <div>
+              <div class="card-subtle">Last Service</div>
+              <div><strong>Never</strong></div>
+            </div>
+          </div>
+        </article>
+        <!-- Jessica Lee -->
+        <article class="card" aria-labelledby="cust-4">
+          <div class="card-header">
+            <div>
+              <h3 id="cust-4" class="card-title">Jessica Lee</h3>
+              <div class="card-subtle">jessica.lee@example.com</div>
+              <div class="card-subtle">(555) 789-0123</div>
+            </div>
+            <div>
+              <span class="badge ok">★ Reliable</span>
+              <button class="btn" aria-label="More actions" title="More">⋯</button>
+            </div>
+          </div>
+          <div class="grid" style="grid-template-columns:repeat(2,1fr); gap:12px;">
+            <div>
+              <div class="card-subtle">Vehicles</div>
+              <div><strong>3</strong></div>
+            </div>
+            <div>
+              <div class="card-subtle">Last Service</div>
+              <div><strong>3 days ago</strong></div>
+            </div>
+          </div>
+        </article>
+        <!-- David Wilson -->
+        <article class="card" aria-labelledby="cust-5">
+          <div class="card-header">
+            <div>
+              <h3 id="cust-5" class="card-title">David Wilson</h3>
+              <div class="card-subtle">david.w@example.com</div>
+              <div class="card-subtle">(555) 234-5678</div>
+            </div>
+            <div>
+              <span class="badge urgent">⚠ Flagged</span>
+              <button class="btn" aria-label="More actions" title="More">⋯</button>
+            </div>
+          </div>
+          <div class="grid" style="grid-template-columns:repeat(2,1fr); gap:12px;">
+            <div>
+              <div class="card-subtle">Vehicles</div>
+              <div><strong>1</strong></div>
+            </div>
+            <div>
+              <div class="card-subtle">Last Service</div>
+              <div><strong>2 months ago</strong></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <p class="site-footer">© <span id="year"></span> JILAZ Motors. All rights reserved.</p>
+  </main>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
