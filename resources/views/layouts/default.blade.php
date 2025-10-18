@@ -44,7 +44,6 @@
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">Log Out</a>
                             </form>
                         </li>
-                        <li><a href="{{ route('menu') }}" class="order-btn">Order Online</a></li>
                         @else
                         <li><a href="{{ route('register') }}" class="{{ request()->routeIs('register') ? 'active' : '' }}">Sign Up</a></li>
                         @endauth
@@ -79,9 +78,9 @@
                     <h3>Slice of Life</h3>
                     <p>Family-owned pizza with a tradition of excellence since 1995.</p>
                     <div class="social-icons">
-                        <a href="#" class="social-icon">📱</a>
-                        <a href="#" class="social-icon">📘</a>
-                        <a href="#" class="social-icon">📸</a>
+                        <a href="https://www.whatsapp.com/?lang=en" class="social-icon"><img src="{{ asset('images/icons8-whatsapp-50.png') }}" alt="WhatsApp"></a>
+                        <a href="https://www.facebook.com/" class="social-icon"><img src="{{ asset('images/icons8-facebook-50.png') }}" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/" class="social-icon"><img src="{{ asset('images/icons8-instagram-50.png') }}" alt="Instagram"></a>
                     </div>
                 </div>
                 <div class="footer-section">
