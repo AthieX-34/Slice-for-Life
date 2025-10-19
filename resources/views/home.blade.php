@@ -21,7 +21,6 @@
                     <p>Experience an authentic slice from across the world, where each slice can be catered to your liking</p>
                     <div class="home-buttons">
                         <a href="{{ route('menu') }}" class="btn primary-btn">Explore menu</a>
-                        <a href="{{ route('order') }}" class="btn secondary-btn">Order Now</a>
                     </div>
                 </div>
             </div>
@@ -31,17 +30,17 @@
         <section class="features">
             <div class="container">
                 <div class="feature-box">
-                    <div class="feature-icon">🍕</div>
+                    <div class="feature-icon"><img src="{{ asset('images/icons8-pizza-50.png') }}" alt="Pizza"></div>
                     <h3>Quality Ingredients</h3>
                     <p>We use only the freshest, locally-sourced ingredients for our pizzas.</p>
                 </div>
                 <div class="feature-box">
-                    <div class="feature-icon">🏠</div>
+                    <div class="feature-icon"><img src="{{ asset('images/icons8-house-64.png') }}" alt="house"></div>
                     <h3>Family Tradition</h3>
                     <p>Our recipes have been in the family for over three generations.</p>
                 </div>
                 <div class="feature-box">
-                    <div class="feature-icon">🛵</div>
+                    <div class="feature-icon"><img src="{{ asset('images/icons8-motorbike-50.png') }}" alt="motorbike"></div>
                     <h3>Fast Delivery</h3>
                     <p>Hot and fresh pizza delivered to your doorstep within 30 minutes.</p>
                 </div>
@@ -59,28 +58,28 @@
                         <h3>Pepperoni</h3>
                         <p>Fresh tomatoes sauce, mozzarella and our homemade pepperoni</p>
                         <span class="price">R119.99</span>
-                        <a href="#" class="btn add-to-cart">Add to Cart</a>
+                        <a href="{{ route('menu') }}" class="btn add-to-cart">Order Now</a>
                     </div>
                     <div class="pizza-card">
                         <div class="pizza-img pizza-2"></div>
                         <h3>Neapolitan Margherita</h3>
                         <p>Mozzarella, Fresha tomatoes and basil</p>
                         <span class="price">R99.99</span>
-                        <a href="#" class="btn add-to-cart">Add to Cart</a>
+                        <a href="{{ route('menu') }}" class="btn add-to-cart">Order Now</a>
                     </div>
                     <div class="pizza-card">
                         <div class="pizza-img pizza-3"></div>
                         <h3>CPT Margherita</h3>
                         <p>Fresh tomatoes and mozzarella, what more can u ask for</p>
                         <span class="price">R89.99</span>
-                        <a href="#" class="btn add-to-cart">Add to Cart</a>
+                        <a href="{{ route('menu') }}" class="btn add-to-cart">Order Now</a>
                     </div>
                     <div class="pizza-card">
                         <div class="pizza-img pizza-4"></div>
                         <h3>Cape Flats</h3>
                         <p>Freshly grounded meat, bell peppers, mozzarella and our secret sauce</p>
                         <span class="price">R129.99</span>
-                        <a href="#" class="btn add-to-cart">Add to Cart</a>
+                        <a href="{{ route('menu') }}" class="btn add-to-cart">Order Now</a>
                     </div>
                 </div>
                 <div class="view-more">

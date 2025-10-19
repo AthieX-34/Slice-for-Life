@@ -696,8 +696,8 @@ img { /* for all the images, mostly used as backgrounds*/
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: #333;
     transition: background-color 0.3s ease;
@@ -705,7 +705,7 @@ img { /* for all the images, mostly used as backgrounds*/
 }
 
 .social-icon:hover {
-    background-color: rgb(255, 153, 0);
+    background-color: white;
 }
 
 .copyright {
